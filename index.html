@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html+css+js基础</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="container">
+
+        <header>
+            <h1 style="margin-bottom:0;">主要的网页标题</h1>
+        </header>
+        <div class="content">
+            <menu>
+                <!-- <h4>菜单</h4> -->
+                <ul class="menu-wrap">
+                    <!-- <li class="menu-item" onclick="changeMenu('menu')">菜单</li> -->
+                    <li class="menu-item" onclick="changeMenu('html')">HTML</li>
+                    <li class="menu-item" onclick="changeMenu('css')">CSS</li>
+                    <li class="menu-item" onclick="changeMenu('js')">JavaScript</li>
+                    <li class="menu-item" onclick="changeMenu('brower')">浏览器控制台</li>
+                </ul>
+            </menu>
+    
+            <main>
+                <div class="content-item content-html">
+                    HTML的内容容器
+                </div>
+                <div class="content-item content-css">
+                    CSS的内容
+                </div>
+                <div class="content-item content-javascript">
+                    JavaScript的内容
+                </div>
+                <div class="content-item content-brower">
+                    <h4>根据浏览器控制台确定错误的来源</h4> 
+                    <ol>
+                        <li>验证登录过期
+                            <div>
+                                <i>Application:</i>
+                                <a href="http://172.16.20.149:2080/" target="_bank">示例网站</a>
+                            </div>
+                        </li>
+                        <li>数据交互
+                            <div>
+                                <i>Network:</i>
+                                <a href="http://172.16.20.149:2080/agency/index?state=7" target="_bank">示例网站</a>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </main>
+        </div>
+            
+        <footer>版权所有1997-2019北京久其软件股份有限公司京ICP备11025610号-6</footer>
+            
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
