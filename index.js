@@ -2,25 +2,47 @@
  * 切换菜单
  * @menuItem 要切换到的菜单标识
  * */ 
-function changeMenu(menuItem){
+// let className = 'content-ele';
+// displayMenu('content-ele')
+function changeMenu(idx, menuItem){
     // 保存切换到的内容的类名，默认是内容html容器的类名
-    let className = 'content-html'
+    let className = null;
     switch (menuItem) {
         // 如果要切换的是 css菜单
-        case 'css':
+        case 'log':
             // 保存css内容容器的类名
-            className = 'content-css'
+            className = 'content-log'
             break;
         // 如果要切换的是 js菜单
-        case 'js':
+        case 'sourses':
             // 保存css内容容器的类名
-            className = 'content-javascript'
+            className = 'content-sourses'
             break;
-        case 'brower':
+        case 'network':
             // 保存css内容容器的类名
-            className = 'content-brower'
+            className = 'content-network'
             break;
-    }    
+        case 'performance':
+            // 保存css内容容器的类名
+            className = 'content-performance'
+            break;
+        case 'code':
+            // 保存css内容容器的类名
+            className = 'content-code'
+            break;
+        case 'ajax':
+            // 保存css内容容器的类名
+            className = 'content-ajax'
+            break;
+        default:
+            className = 'content-ele'
+    }   
+
+    menuListEle = Array.from(document.getElementsByClassName('menu-item'))
+    menuListEle.forEach((ele, index)=>{
+        menuListEle[index].classList.remove("cur-menu-selected");
+        menuListEle[idx].classList.add("cur-menu-selected");
+    })
     // 调用displayMenu,传入
     displayMenu(className)
 }

@@ -4,53 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>html+css+js基础</title>
+    <title>font end test</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div id="container">
-
         <header>
-            <h1 style="margin-bottom:0;">主要的网页标题</h1>
+            <h2 style="margin-bottom:0;">前端基础知识能为测试做些什么？</h2>
         </header>
         <div class="content">
             <menu>
                 <!-- <h4>菜单</h4> -->
                 <ul class="menu-wrap">
                     <!-- <li class="menu-item" onclick="changeMenu('menu')">菜单</li> -->
-                    <li class="menu-item" onclick="changeMenu('html')">HTML</li>
-                    <li class="menu-item" onclick="changeMenu('css')">CSS</li>
-                    <li class="menu-item" onclick="changeMenu('js')">JavaScript</li>
-                    <li class="menu-item" onclick="changeMenu('brower')">浏览器控制台</li>
+                    <li class="menu-item cur-menu-selected" onclick="changeMenu(0, 'ele')">Elements</li>
+                    <li class="menu-item" onclick="changeMenu(1, 'log')">Console</li>
+                    <li class="menu-item" onclick="changeMenu(2, 'sourses')">Sources</li>
+                    <li class="menu-item" onclick="changeMenu(3, 'network')">Network</li>
+                    <li class="menu-item" onclick="changeMenu(4, 'performance')">Performance</li>
+                    <li class="menu-item" onclick="changeMenu(5, 'code')">Status Code</li>
+                    <li class="menu-item" onclick="changeMenu(6, 'ajax')">AJAX</li>
                 </ul>
             </menu>
     
             <main>
-                <div class="content-item content-html">
-                    HTML的内容容器
-                </div>
-                <div class="content-item content-css">
-                    CSS的内容
-                </div>
-                <div class="content-item content-javascript">
-                    JavaScript的内容
-                </div>
-                <div class="content-item content-brower">
-                    <h4>根据浏览器控制台确定错误的来源</h4> 
-                    <ol>
-                        <li>验证登录过期
-                            <div>
-                                <i>Application:</i>
-                                <a href="http://172.16.20.149:2080/" target="_bank">示例网站</a>
-                            </div>
+                <div class="content-item content-ele">
+                    <h3>元素面板</h3>
+                    <p>使用元素面板可以自由的操作DOM和CSS来迭代布局和设计页面.测试时常通过手动增加字数，查看展示效果,验证内容过多时样式是否变形。</p>
+                    <h5>例如：</h5>
+                    <ul>
+                        <li>
+                            <p>内容多的时候应该以'...'展示:</p>
+                            <span class="explanatione ellipsis">该文本容器宽度超出500像素后截取内容以 '...' 表示</span>
                         </li>
-                        <li>数据交互
-                            <div>
-                                <i>Network:</i>
-                                <a href="http://172.16.20.149:2080/agency/index?state=7" target="_bank">示例网站</a>
-                            </div>
+                        <li>
+                            <p>做自动测试中定位元素：</p>
+                            <span class="explanatione">通过操作开发者工具elements演示该功能。</span>
                         </li>
-                    </ol>
+                    </ul>
+                </div>
+                <div class="content-item content-log">
+                    <h3>控制台面板</h3>
+                    <p>在开发期间，可以使用控制台面板记录诊断信息，或者使用它作为 shell在页面上与JavaScript交互。</p>
+                    <ul>
+                        <li>
+                            <p>目前在测试中未使用到：</p>
+                            <span class="explanatione">通过在操作开发者工具Console面板上执行javascript演示该功能。</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-item content-sourses">
+                    <h3>源代码面板</h3>
+                    <p>开发时断点调试</p>
+                    <ul>
+                        <li>
+                            <p>目前在测试中未使用到：</p>
+                            <span class="explanatione">暂不演示。</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-item content-network">
+                    <h3>网络面板</h3>
+                    <p>使用网络面板了解请求和下载的资源文件并优化网页加载性能。另外，调试模式下，强烈建议勾选Disable cache选项，以避免缓存引起的一些诡异问题。</p>
+                    <img class="img" src="./img/network_1.png" alt="">
+                    <ul>
+                        <li>
+                            <p>录制页面快照：</p>
+                            <span class="explanatione">通过在操作开发者工具Network面板上演示该功能。</span>
+                            <span class="explanatione pointer" onclick="changeMenu(4, 'performance')">该功能同Performance</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-item content-performance">
+                    <h3>性能面板</h3>
+                    <p>使用性能面板了解请求和下载的资源文件并优化网页加载性能。</p>
+                    <img class="img" src="./img/performance_1.png" alt="">
+                    <!-- <ul>
+                        <li>
+                            <p>录制页面快照：</p>
+                            <span class="explanatione">通过在操作开发者工具Network面板上演示该功能。</span>
+                        </li>
+                    </ul> -->
+                </div>
+                <div class="content-item content-code">
+                    <h3>HTTP状态码</h3>
+                    <a href="http://www.yunweipai.com/archives/22877.html" target="_blank">通过一篇形象好记的文章了解</a>
+                    <p>用以表示网页服务器HTTP响应状态的3位数字代码。</p>
+                    <img class="img" src="./img/code_1.jpg" alt="">
+                    <img class="img" src="./img/code_2.jpg" alt="">
+                    <!-- <ul>
+                        <li>
+                            <p>录制页面快照：</p>
+                            <span class="explanatione">通过在操作开发者工具Network面板上演示该功能。</span>
+                        </li>
+                    </ul> -->
+                </div>
+                <div class="content-item content-ajax">
+                    <h3>AJAX</h3>
+                    <p>使用Ajax的最大优点，就是能在不更新整个页面的前提下维护数据。这使得Web应用程序更为迅捷地回应用户动作，并避免了在网络上发送那些没有改变的信息。
+                        Ajax不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。</p>
+                    <a href="http://jquery.cuishifeng.cn/jQuery.Ajax.html" target="_blank">学习网站</a>
+                        <!-- <ul>
+                        <li>
+                            <p>录制页面快照：</p>
+                            <span class="explanatione">通过在操作开发者工具Network面板上演示该功能。</span>
+                        </li>
+                    </ul> -->
                 </div>
             </main>
         </div>

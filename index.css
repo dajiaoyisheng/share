@@ -18,9 +18,9 @@ header{
 .content{
     position: absolute;
     display: flex;
-    margin-top: 42px;
+    margin-top: 30px;
     width: 100%;
-    height: calc(100% - 42px);
+    height: calc(100% - 30px);
 }
 menu{
     background-color:#FFD700;
@@ -31,22 +31,40 @@ menu{
 .menu-item{
     cursor: pointer;
 }
-.menu-item:hover{
+.menu-item:hover,
+.cur-menu-selected{
     color: #fff;
 }
 
 main{
-    padding:20px;
-    background-color:#EEEEEE;
-    width:100%;
+    padding: 20px;
+    background-color: #EEEEEE;
+    width: 100%;
+    overflow-y: scroll;
 }
 /* 先让所有的菜单内容都隐藏 */
 .content-item{
     display: none;
 }
-/* 默认让html内容容器显示 */
-.content-html{
+.ellipsis{
+    display: inline-block;
+    width: 500px;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+}
+.explanatione{
+    font-size: 13px;
+    color: #716a6a;
+}
+.content-ele{
     display: block;
+}
+.img{
+    width: 50%;
+}
+.pointer{
+    cursor: pointer;
 }
 footer{
     position: fixed;
