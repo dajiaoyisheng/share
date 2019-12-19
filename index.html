@@ -21,9 +21,10 @@
                     <li class="menu-item" onclick="changeMenu(1, 'log')">Console</li>
                     <li class="menu-item" onclick="changeMenu(2, 'sourses')">Sources</li>
                     <li class="menu-item" onclick="changeMenu(3, 'network')">Network</li>
-                    <li class="menu-item" onclick="changeMenu(4, 'performance')">Performance</li>
-                    <li class="menu-item" onclick="changeMenu(5, 'code')">Status Code</li>
-                    <li class="menu-item" onclick="changeMenu(6, 'ajax')">AJAX</li>
+                    <li class="menu-item" onclick="changeMenu(4, 'app')">Application</li>
+                    <li class="menu-item" onclick="changeMenu(5, 'performance')">Performance</li>
+                    <li class="menu-item" onclick="changeMenu(6, 'code')">Status Code</li>
+                    <li class="menu-item" onclick="changeMenu(7, 'ajax')">AJAX</li>
                 </ul>
             </menu>
     
@@ -69,11 +70,27 @@
                     <img class="img" src="./img/network_1.png" alt="">
                     <ul>
                         <li>
+                            <p>登录-用户信息的安全性：</p>
+                            <span class="explanatione">通过在操作开发者工具Network面板上演示该功能。</span>
+                            <p>
+                                <a href="https://manage.joinshare.newssdk.com" target="_blank">测试joinshare中登录时用户信息是否暴露</a>
+                            </p>
+                        </li>
+                        <li>
                             <p>录制页面快照：</p>
                             <span class="explanatione">通过在操作开发者工具Network面板上演示该功能。</span>
                             <span class="explanatione pointer" onclick="changeMenu(4, 'performance')">该功能同Performance</span>
                         </li>
                     </ul>
+                </div>
+                <!-- Application -->
+                <div class="content-item content-app">
+                    <h3>Application</h3>
+                    <p>主要作用是检查 web 应用加载的所有资源，包括 Local Storage、Session Storage、IndexedDB、<b>Cookies</b>、Cache Storage 等。</p>
+                    <h5>Cookies验证登录超时：</h5>
+                    <p>
+                        <a href="https://manage.joinshare.newssdk.com/ent/index" target="_blank">测试joinshare中登录超时功能</a>
+                    </p>
                 </div>
                 <div class="content-item content-performance">
                     <h3>性能面板</h3>
@@ -91,25 +108,105 @@
                     <a href="http://www.yunweipai.com/archives/22877.html" target="_blank">通过一篇形象好记的文章了解</a>
                     <p>用以表示网页服务器HTTP响应状态的3位数字代码。</p>
                     <img class="img" src="./img/code_1.jpg" alt="">
+                    <ul>
+                        <li>301—永久移动。被请求的资源已被永久移动位置；</li>
+                        <li>302—请求的资源现在临时从不同的 URI 响应请求；</li>
+                        <li>305—使用代理。被请求的资源必须通过指定的代理才能被访问；</li>
+                        <li>307—临时跳转。被请求的资源在临时从不同的URL响应请求；</li>
+                        <li>400—错误请求；</li>
+                        <li>402—需要付款。该状态码是为了将来可能的需求而预留的，用于一些数字货币或者是微支付；</li>
+                        <li>403—禁止访问。服务器已经理解请求，但是拒绝执行它；</li>
+                        <li>404—找不到对象。请求失败，资源不存在；</li>
+                        <li>406—不可接受的。请求的资源的内容特性无法满足请求头中的条件，因而无法生成响应实体；</li>
+                    </ul>
                     <img class="img" src="./img/code_2.jpg" alt="">
-                    <!-- <ul>
-                        <li>
-                            <p>录制页面快照：</p>
-                            <span class="explanatione">通过在操作开发者工具Network面板上演示该功能。</span>
-                        </li>
-                    </ul> -->
+                    <ul>
+                        <li>408—请求超时；</li>
+                        <li>409—冲突。由于和被请求的资源的当前状态之间存在冲突，请求无法完成；</li>
+                        <li>410—遗失的。被请求的资源在服务器上已经不再可用，而且没有任何已知的转发地址；</li>
+                        <li>413—响应实体太大。服务器拒绝处理当前请求，请求超过服务器所能处理和允许的最大值。</li>
+                        <li>417—期望失败。在请求头 Expect 中指定的预期内容无法被服务器满足；</li>
+                        <li>418—我是一个茶壶。超文本咖啡罐控制协议，但是并没有被实际的HTTP服务器实现；</li>
+                        <li>420—方法失效。</li>
+                        <li>422—不可处理的实体。请求格式正确，但是由于含有语义错误，无法响应；</li>
+                        <li>500—服务器内部错误。服务器遇到了一个未曾预料的状况，导致了它无法完成对请求的处理；</li>
+                    </ul>
+                    <img class="img" src="./img/code_3.jpg" alt="">
+                    <p>
+                        <a href="https://manage.joinshare.newssdk.com/error" target="_blank">joinshare错误页面</a>
+                    </p>
                 </div>
                 <div class="content-item content-ajax">
                     <h3>AJAX</h3>
-                    <p>使用Ajax的最大优点，就是能在不更新整个页面的前提下维护数据。这使得Web应用程序更为迅捷地回应用户动作，并避免了在网络上发送那些没有改变的信息。
-                        Ajax不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。</p>
-                    <a href="http://jquery.cuishifeng.cn/jQuery.Ajax.html" target="_blank">学习网站</a>
-                        <!-- <ul>
-                        <li>
-                            <p>录制页面快照：</p>
-                            <span class="explanatione">通过在操作开发者工具Network面板上演示该功能。</span>
-                        </li>
-                    </ul> -->
+                    <p>
+                        使用Ajax的最大优点，就是能在不更新整个页面的前提下维护数据。这使得Web应用程序更为迅捷地回应用户动作，并避免了在网络上发送那些没有改变的信息。
+                        Ajax不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。
+                        <a href="http://jquery.cuishifeng.cn/jQuery.Ajax.html" target="_blank">学习网站</a>
+                    </p>
+                    
+                    <textarea rows="50" cols="150" readonly>
+                        ajax({
+                            url: "./TestXHR.aspx",              //请求地址
+                            type: "POST",                       //请求方式
+                            data: { name: "super", age: 20 },        //请求参数
+                            dataType: "json",
+                            success: function (response, xml) {
+                                // 此处放成功后执行的代码
+                            },
+                            fail: function (status) {
+                                // 此处放失败后执行的代码
+                            }
+                        });
+                    
+                        function ajax(options) {
+                            options = options || {};
+                            options.type = (options.type || "GET").toUpperCase();
+                            options.dataType = options.dataType || "json";
+                            var params = formatParams(options.data);
+                    
+                            //创建 - 非IE6 - 第一步
+                            if (window.XMLHttpRequest) {
+                                var xhr = new XMLHttpRequest();
+                            } else { //IE6及其以下版本浏览器
+                                var xhr = new ActiveXObject('Microsoft.XMLHTTP');
+                            }
+                                        
+                            //连接 和 发送 - 第二步
+                            if (options.type == "GET") {
+                                xhr.open("GET", options.url + "?" + params, true);
+                                xhr.send(null);
+                            } else if (options.type == "POST") {
+                                xhr.open("POST", options.url, true);
+                                //设置表单提交时的内容类型
+                                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                                xhr.send(params);
+                            }
+
+                            //接收 - 第三步
+                            xhr.onreadystatechange = function () {
+                                if (xhr.readyState == 4) {
+                                    var status = xhr.status;
+                                    if (status >= 200 && status < 300) {
+                                        options.success && options.success(xhr.responseText, xhr.responseXML);
+                                    } else {
+                                        options.fail && options.fail(status);
+                                    }
+                                }
+                            }
+                        }
+                        //格式化参数
+                        function formatParams(data) {
+                            var arr = [];
+                            for (var name in data) {
+                                arr.push(encodeURIComponent(name) + "=" + encodeURIComponent(data[name]));
+                            }
+                            arr.push(("v=" + Math.random()).replace(".",""));
+                            return arr.join("&");
+                        }
+                    </textarea>
+                    <p>
+                        <a href="https://manage.joinshare.newssdk.com/js/tools.js?version=1.3" target="_blank">joinshare中ajax的使用</a>
+                    </p>
                 </div>
             </main>
         </div>
