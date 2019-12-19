@@ -34,6 +34,10 @@ function changeMenu(idx, menuItem){
             // 保存css内容容器的类名
             className = 'content-code'
             break;
+        case 'js':
+            // 保存css内容容器的类名
+            className = 'content-js'
+            break;
         case 'ajax':
             // 保存css内容容器的类名
             className = 'content-ajax'
